@@ -4,9 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Curso de Arquitecturas CSS</title>
 </head>
 <body>
-    
+    <header>
+        <div class="menuProfile">
+            <div class="menuProfile__button">
+                <i class="searchBar__icon--menu bi bi-list-nested"></i>
+            </div>
+            <h2 class="menuProfile__name">ananda</>
+        </div>
+        <div class="searchBar">
+            <select class="searchBar__select" name="categories" id="categories">
+                <option value="all">All Categories</option>
+                <option value="furniture">Furniture</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="accessories">Accessories</option>
+                <option value="shoes">Shoes</option>
+            </select>
+            <label for="search" class="searchBar__label">
+                <i class="searchBar__icon--search bi bi-search"></i>
+                <input type="text" class="searchBar__input" id="search" placeholder="Search"/>
+            </label>
+        </div>
+        <div class="shoppingCart">
+            <i class="searchBar__icon--shop bi bi-cart3"></i>
+        </div>
+    </header>
+    <main>
+        <section class="mainProducts">
+            <div class="mainProducts__header">
+                <h1 class="mainProducts__title"><span class="mainProducts__title--bold">Discover</span> the best</h1>
+                <a href="" class="mainProducts__link">See more</a>
+            </div>
+            <div class="mainProducts__container">
+                <div class="mainProducts__principal">
+                    <article class="mainProducts__item">
+                        <h4 class="mainProducts__text">
+                            <span class="mainProducts__text--bold">Chairs</span>
+                            <span class="mainProducts__text--light">001</span>
+                        </h4>
+                        <div class="mainProducts__addProduct">
+                            <i class="mainProducts__icon bi bi-plus-lg"></i>
+                        </div>
+                    </article>
+                </div>
+                <div class="mainProducts__secondary">
+                    <article class="mainProducts__item">
+                        <h4 class="mainProducts__text">
+                            <span class="mainProducts__text--bold">Chairs</span>
+                            <span class="mainProducts__text--light">002</span>
+                        </h4>
+                    </article>
+                    <article class="mainProducts__item">
+                        <h4 class="mainProducts__text">
+                            <span class="mainProducts__text--bold">Chairs</span>
+                            <span class="mainProducts__text--light">003</span>
+                        </h4>
+                    </article>
+                    <article class="mainProducts__item">
+                        <h4 class="mainProducts__text">
+                            <span class="mainProducts__text--bold">Chairs</span>
+                            <span class="mainProducts__text--light">004</span>
+                        </h4>
+                    </article>
+                    <article class="mainProducts__item">
+                        <h4 class="mainProducts__text">
+                            <span class="mainProducts__text--bold">Chairs</span>
+                            <span class="mainProducts__text--light">005</span>
+                        </h4>
+                    </article>
+                    <article class="mainProducts__item">
+                        <h4 class="mainProducts__text">
+                            <span class="mainProducts__text--bold">Chairs</span>
+                            <span class="mainProducts__text--light">001</span>
+                        </h4>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="mainCategories">
+            <div class="mainCategories__header">
+                <div class="mainCategories__types">
+                    <h5 class="mainCategories__text">My favorites</h5>
+                    <h5 class="mainCategories__text">Previously viewed</h5>
+                    <h5 class="mainCategories__text">Last bougth</h5>
+                </div>
+                <a class="mainCategories__link" href="">See more</a>
+            </div>
+            <div class="mainCategories__container">
+                <figure class="mainCategories__item">
+                    <div class="mainCategories__image">
+                        <img src="" alt="">
+                        <ul class="mainCategories__listaColors">
+                            <li class="mainCategories__color"></li>
+                            <li class="mainCategories__color"></li>
+                        </ul>
+                    </div>
+                    <figcaption class="mainCategories__text">
+                        <h4 class="mainCategories__title">Older Alice</h4>
+                        <p class="mainCategories__price">S/125.00</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <aside class="shopping">
+        <div class="shopping__header">
+            <i class="shopping__icon bi bi-arrow-right"></i>
+            <div class="shopping__settings">
+                <i class="shopping__icon shopping__icon--button bi bi-cart-check"></i>
+                <i class="shopping__icon shopping__icon--button bi bi-person"></i>
+            </div>
+        </div>
+        <section class="shopping__list">
+            <article class="shopping__product">
+                <img class="shopping__productImage" src="" alt="">
+                <div class="shopping__productDetails">
+                    <h3 class="shopping__text">Tossberg</h3>
+                    <p class="shopping__text shopping__text--small">
+                        <span>S/125.00</span>
+                        <span class="shopping__text--light">Gray</span>
+                    </p>
+                </div>
+                <div class="shopping__changeAmount">
+                    <i class="shopping__icon bi bi-caret-up-fill"></i>
+                    <p class="shopping__text shopping__text--small">1</p>
+                    <i class="shopping__icon bi bi-caret-down-fill"></i>
+                </div>
+            </article>
+        </section>
+        <section class="shopping__Price">
+            <div class="shopping__info">
+                <div class="shopping__detail">
+                    <p class="shopping__text shopping__text--lefth">Subtotal</p>
+                    <p class="shopping__text shopping__text--right">S/560.00</p>
+                </div>
+                <div class="shopping__detail">
+                    <p class="shopping__text shopping__text--lefth">Shipment<a class="shopping__text--link" href="/">Check details</a></p>
+                    <p class="shopping__text shopping__text--right">S/120.00</p>
+                </div>
+                <div class="shopping__detail">
+                    <p class="shopping__text shopping__text--lefth">Discount<a class="shopping__text--link" href="/">Remove</a></p>
+                    <p class="shopping__text shopping__text--right">S/10.00</p>
+                </div>
+            </div>
+            <div class="shopping__total">
+                <h3 class="shopping__text shopping__text--total">Total</h3>
+                <p class="shopping__text shopping__text--total">S/580.00</p>
+            </div>
+        </section>
+        <button class="shopping__checkout">
+            <i class="shopping__icon bi bi-plus-lg"></i>
+            <p class="shopping__text">Checkout Payment</p>
+        </button>
+    </aside>
 </body>
 </html>

@@ -1,0 +1,37 @@
+html{
+    font-size: 62.5%;
+}
+h1{
+    @include text(hg, light, primary-text);
+}
+h2{
+    @include text(bg, light, primary);
+}
+h3{
+    @include text(md, light, primary);
+}
+h4{
+    @include text(md, light, primary-text);
+}
+h5{
+    @include text(md, light, primary-text);
+}
+p {
+    @include text(sm, light, secondary-text);
+}
+a{
+    @include text(sm, light, primary);
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+select{ 
+    @include text(sm, light, primary-text);
+}
+option {
+    @include text(sm, light, primary);
+}
+input::placeholder{
+    @include text(sm, light, secondary-text);
+}
