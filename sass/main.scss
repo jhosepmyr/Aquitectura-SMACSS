@@ -5,6 +5,7 @@
     './utils/breakpoints',
     './utils/colors',
     './utils/fonts',
+    './utils/_images.scss',
     './utils/mixins',
     './utils/functions';
 
@@ -19,13 +20,15 @@
 // 4. Layout-related sections
 @import
     './layouts/body',
-    './layouts/header';
+    './layouts/header',
+    './layouts/main';
 
 // 5. Components
 @import
     './components/menuProfile',
     './components/searchBar',
-    './components/shoppingCartIcon';
+    './components/shoppingCartIcon',
+    './components/mainProducts';
 
 // 6. Page-specific styles
 
