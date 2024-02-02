@@ -17,10 +17,15 @@
     './base/base';
 
 // 4. Layout-related sections
-
+@import
+    './layouts/body',
+    './layouts/header';
 
 // 5. Components
-
+@import
+    './components/menuProfile',
+    './components/searchBar',
+    './components/shoppingCartIcon';
 
 // 6. Page-specific styles
 

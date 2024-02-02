@@ -1,0 +1,4 @@
+header{
+    @include grid-container(repeat(2,auto), repeat(2, auto), null, center);
+    gap: 0.5rem;
+}

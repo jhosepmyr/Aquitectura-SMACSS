@@ -1,0 +1,12 @@
+.menuProfile{
+    justify-self: start;
+    @include flexbox(row, center, center);
+    gap: 0.5rem;
+    &__button{
+        padding: 0.6rem;
+        background: map-get($map: $colors, $key: 'background-gradient');
+        color: map-get($map: $colors, $key: 'secondary');
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+}

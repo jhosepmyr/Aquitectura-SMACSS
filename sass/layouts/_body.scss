@@ -1,0 +1,5 @@
+body{
+    height: 100vh;
+    padding: 1.5rem;
+    @include grid-container(1fr, auto 1fr);
+}

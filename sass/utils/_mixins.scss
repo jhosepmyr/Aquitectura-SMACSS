@@ -10,6 +10,13 @@
     justify-content: $content;
     align-items: $align;
 }
+@mixin grid-container ($columns, $rows: null, $content: null, $align: null){
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    justify-content: $content;
+    align-items: $align;
+}
 @mixin font-text($size, $weight: null, $height: null){
     font-size: $size;
     font-weight: $weight;
