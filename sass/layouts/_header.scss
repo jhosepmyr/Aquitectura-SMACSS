@@ -1,4 +1,11 @@
 header{
     @include grid-container(repeat(2,auto), repeat(2, auto), null, center);
     gap: 0.5rem;
+    @include respond-to('large'){
+        padding-top: 2rem;
+        grid-area: header;
+        @include grid-container(auto 1fr, 1fr, space-between, center);
+        grid-template-areas: 
+        'menuProfile searchBar';
+    }
 }

@@ -1,0 +1,18 @@
+.shoppingHeader{
+    width: 100%;
+    @include flexbox(row, space-between, center);
+    &__settings{
+        @include flexbox(row, center, center);
+        gap: 1rem;
+    }
+    &__icon{
+        @extend .menuProfile__button;
+        background: none;
+        &--darkbackground{
+            background-color: map-get($map: $colors, $key: 'tertiary');
+        }
+        &--lightbackground{
+            background-color: map-get($map: $colors, $key: 'fourth');
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.shoppingList{
+    width: 100%;
+    @include flexbox(column);
+    gap: 0.7rem;
+    &__product{
+        padding-right: 1.5rem;
+        @include grid-container(minmax(4rem, 5rem) 1fr auto, null, null, center);
+        gap: 1rem;
+        background-color: map-get($map: $colors, $key: 'fourth');
+        border-radius: 1rem;
+    }
+    &__productImage{
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+    &__productDetails{
+        @include flexbox(column, center, start);
+        gap: 0.5rem;
+    }
+    &__text{
+        color: map-get($map: $colors, $key: 'secondary');
+        &--bold{
+            font-weight: bold;
+        }
+        &--light{
+            padding-left: 0.5rem;
+            color: map-get($map: $colors, $key: 'secondary-text');
+        }
+        &--pointer{
+            cursor: pointer;
+        }
+    }
+    &__changeAmount{
+        @include flexbox(column, center, center);
+        gap: 0.3rem;
+    }
+}

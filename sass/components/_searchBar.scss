@@ -6,6 +6,10 @@
     gap: 2rem;
     border: 1px solid map-get($map: $colors, $key: 'secondary-text');
     border-radius: 0.5rem;
+    @include respond-to('large'){
+        grid-area: searchBar;
+        justify-self: end;
+    }
     &__select{
         border: none;
         &:focus{

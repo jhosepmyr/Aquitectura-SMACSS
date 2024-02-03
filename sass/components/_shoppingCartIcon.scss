@@ -1,4 +1,7 @@
 .shoppingCartIcon{
     justify-self: end;
     @extend .menuProfile__button;
+    @include respond-to('large'){
+        display: none;
+    }
 }

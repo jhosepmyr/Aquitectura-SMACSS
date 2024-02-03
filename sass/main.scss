@@ -19,16 +19,25 @@
 
 // 4. Layout-related sections
 @import
+    './layouts/main',
     './layouts/body',
     './layouts/header',
-    './layouts/main';
+    './layouts/aside';
 
 // 5. Components
 @import
     './components/menuProfile',
     './components/searchBar',
     './components/shoppingCartIcon',
-    './components/mainProducts';
+    './components/mainProducts',
+    './components/mainHeader',
+    './components/typeProducts',
+    './components/mainCategories',
+    './components/listCategories',
+    './components/cards',
+    './components/shoppingList',
+    './components/shoppingPrice',
+    './components/shoppingHeader';
 
 // 6. Page-specific styles
 

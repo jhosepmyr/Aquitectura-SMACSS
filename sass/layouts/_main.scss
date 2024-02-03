@@ -1,0 +1,7 @@
+main{
+    width: 100%;
+    @include grid-container(null, 1fr auto);
+    @include respond-to('large'){
+        grid-area: main;
+    }
+}

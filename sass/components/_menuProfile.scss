@@ -8,5 +8,12 @@
         color: map-get($map: $colors, $key: 'secondary');
         border-radius: 0.5rem;
         cursor: pointer;
+        @include respond-to('large'){
+            padding: 1rem;
+            font-size: map-get($map: $font-size, $key: 'bg');
+        }
+    }
+    @include respond-to('large'){
+        grid-area: menuProfile;
     }
 }

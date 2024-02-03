@@ -1,0 +1,9 @@
+.mainHeader{
+    padding: 0 0.5rem;
+    @include flexbox(row, space-between, center);
+    &__title{
+        &--bold{
+            font-weight: bold;
+        }
+    }
+}

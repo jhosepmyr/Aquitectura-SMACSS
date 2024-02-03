@@ -7,36 +7,41 @@ html{
     font-size: 62.5%;
 }
 h1{
-    @include text(hg, light, primary-text);
+    @include text(hg, lighter, primary-text);
+    margin: 0;
 }
 h2{
-    @include text(bg, light, primary);
+    @include text(bg, lighter, primary);
 }
 h3{
-    @include text(md, light, primary);
+    @include text(md, lighter, primary);
 }
 h4{
-    @include text(md, light, primary-text);
+    @include text(md, lighter, primary-text);
 }
 h5{
-    @include text(md, light, primary-text);
+    @include text(md, lighter, primary-text);
 }
 p {
-    @include text(sm, light, secondary-text);
+    @include text(sm, lighter, secondary-text);
 }
 a{
-    @include text(sm, light, primary);
+    @include text(sm, lighter, primary);
     text-decoration: none;
 }
 li{
     list-style: none;
 }
 select{
-    @include text(sm, light, primary-text);
+    @include text(sm, lighter, primary-text);
 }
 option {
-    @include text(sm, light, primary);
+    @include text(sm, lighter, primary);
 }
 input::placeholder{
-    @include text(sm, light, secondary-text);
+    @include text(sm, lighter, secondary-text);
+}
+button{
+    @include text(bg, bold, secondary);
+    cursor: pointer;
 }

@@ -1,7 +1,7 @@
 // MIXIN
 @mixin  text($number-font, $font-weight:null, $text-color){
     font-size: map-get($font-size, $number-font);
-    font-weight: 500;
+    font-weight: $font-weight;
     color: map-get($colors , $text-color);
 }
 @mixin flexbox($direction, $content: null, $align: null) {

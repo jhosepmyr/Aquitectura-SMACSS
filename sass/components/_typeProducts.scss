@@ -1,0 +1,95 @@
+.typeProducts{
+    @include grid-container(null, 1fr auto);
+    @include respond-to('medium'){
+        @include grid-container(minmax(20rem, 25rem) 1fr, 1fr);
+        padding: 3rem 0;
+    }
+    gap: 1rem;
+    overflow: hidden;
+    &__principal{
+        @include flexbox(null);
+        place-content: center;
+    }
+    &__secondary{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        @include respond-to('medium'){
+            height: 100%;
+            overflow: auto;
+        }
+    }
+    &__item{
+        @include flexbox(row, space-between, end);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 2rem;
+        overflow: hidden;
+        &--primary{
+            width: 100%;
+            max-width: 32rem;
+            aspect-ratio: 5/3;
+            background-image: url("https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        }
+        &--secondary{
+            scroll-snap-align: start;
+            height: inherit;
+            @include respond-to('medium'){
+                height: calc(50% - 0.25rem);
+            }
+            flex: 1 0 auto;
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                    $h: (random(7) + 8) + rem;
+                    width: $h;
+                    background-image: nth($list: $images, $n: $i);
+                }
+            }
+            @include respond-to('medium'){
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        $h: (random(5) + 10) + rem;
+                        width: $h;
+                    }
+                }
+            }
+            @include respond-to('medium-large'){
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        $h: (random(5) + 15) + rem;
+                        width: $h;
+                    }
+                }
+            }
+
+        }
+    }
+    &__text{
+        padding: 0.5rem 1rem;
+        &--bold{
+            font-weight: bold;
+        }
+        &--light{
+            font-weight: lighter;
+        }
+    }
+    &__addProduct{
+        padding: 1.2rem;
+        background-color: map-get($map: $colors, $key: 'secondary');
+        border-top-left-radius: 2rem;
+        cursor: pointer;
+    }
+    &__icon{
+        font-weight: bold;
+        font-size: map-get($map: $font-size, $key: 'bg');
+        color: map-get($map: $colors, $key: 'primary-text');
+    }
+}

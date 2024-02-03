@@ -1,0 +1,15 @@
+.listCategories{
+    @include flexbox(row, space-between, center);
+    &__types{
+        @include flexbox(row, start, center);
+        gap: 0.5rem;
+    }
+    &__text{
+        color: map-get($colors , 'secondary-text');
+        cursor: pointer;
+        &--selected{
+            color: map-get($colors , 'primary');
+            font-weight: bold;
+        }
+    }
+}
